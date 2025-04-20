@@ -1,138 +1,138 @@
 #include<iostream>
 using namespace std;
-//STUDENT RECORD SYSTEM-----------------------------------------------task1 
-//class student {
-//	public:
-//	string name;
-//	int rollNumber;
-//	float marks;
-//	public:
-//	void getdata(){
-//		cout<<"enter name";
-//		cin>>name;
-//		cout<<"enter roll number";
-//		cin>>rollNumber;
-//		cout<<"enter marks";
-//		cin>>marks;
-//	}
-//	void displaydata(){
-//		cout<<"name of student is = "<<name<<endl;
-//		cout<<"roll number of student is = "<<rollNumber<<endl;
-//		cout<<"marks of student is = "<<marks<<endl;
-//	}
-//};
-//int main(){
-//	student std;
-//	std.getdata();
-//	std.displaydata();
-//	return 0;
-//}
+STUDENT RECORD SYSTEM-----------------------------------------------task1 
+class student {
+	public:
+	string name;
+	int rollNumber;
+	float marks;
+	public:
+	void getdata(){
+		cout<<"enter name";
+		cin>>name;
+		cout<<"enter roll number";
+		cin>>rollNumber;
+		cout<<"enter marks";
+		cin>>marks;
+	}
+	void displaydata(){
+		cout<<"name of student is = "<<name<<endl;
+		cout<<"roll number of student is = "<<rollNumber<<endl;
+		cout<<"marks of student is = "<<marks<<endl;
+	}
+};
+int main(){
+	student std;
+	std.getdata();
+	std.displaydata();
+	return 0;
+}
 
-//AREA AND PERIMETER OF RECTANGLE------------------------------------------------task2
-//class rectangle{
-//	public:
-//	int length;
-//	int width;
-//	public:
-//	void setDimensions(){
-//		cout<<"enter length of rectangle";
-//		cin>>length;
-//		cout<<"enter width of rectangle";
-//		cin>>width;
-//	}
-//	void area(){
-//		cout<<"area of rectangle = "<<length*width<<endl;
-//	}
-//	void perimeter(){
-//		cout<<"perimeter of rectangle = "<<2*(length+width)<<endl;
-//	}
-//};
-//int main(){
-//	rectangle rec;
-//	rec.setDimensions();
-//	rec.area();
-//	rec.perimeter();
-//	return 0;
-//	
-//}
-
-
-//VOTER ELIGIBILITY-----------------------------------------------task3
-//class Voter {
-//public:
-//    std::string name;
-//    int age;
-//
-//    // Constructor to initialize the Voter object
-//    Voter(std::string voterName, int voterAge) {
-//        name = voterName;
-//        age = voterAge;
-//    }
-//};
-//
-//// Function to check if the voter is eligible to vote
-//void checkEligibility(const Voter& voter) {
-//    if (voter.age > 18) {
-//        std::cout << voter.name << " is eligible to vote." << std::endl;
-//    } else {
-//        std::cout << voter.name << " is not eligible to vote. You must be over 18." << std::endl;
-//    }
-//}
-//
-//int main() {
-//    std::string name;
-//    int age;
-//
-//    // Take input from the user
-//    std::cout << "Enter your name: ";
-//    std::getline(std::cin, name);
-//    std::cout << "Enter your age: ";
-//    std::cin >> age;
-//
-//    // Create a Voter object with user input
-//    Voter voter(name, age);
-//
-//    // Check and display eligibility
-//    checkEligibility(voter);
-//
-//    return 0;
-//}
+AREA AND PERIMETER OF RECTANGLE------------------------------------------------task2
+class rectangle{
+	public:
+	int length;
+	int width;
+	public:
+	void setDimensions(){
+		cout<<"enter length of rectangle";
+		cin>>length;
+		cout<<"enter width of rectangle";
+		cin>>width;
+	}
+	void area(){
+		cout<<"area of rectangle = "<<length*width<<endl;
+	}
+	void perimeter(){
+		cout<<"perimeter of rectangle = "<<2*(length+width)<<endl;
+	}
+};
+int main(){
+	rectangle rec;
+	rec.setDimensions();
+	rec.area();
+	rec.perimeter();
+	return 0;
+	
+}
 
 
-//TEMPRATURE CONVERTER----------------------------task4
+VOTER ELIGIBILITY-----------------------------------------------task3
+class Voter {
+public:
+   std::string name;
+   int age;
 
-//class Temperature {
-//public:
-//    double celsius; // Public data member to store temperature in Celsius
-//
-//    // Function to convert Celsius to Fahrenheit
-//    double toFahrenheit() {
-//        return (celsius * 9 / 5) + 32;
-//    }
-//
-//    // Function to display the converted temperature
-//    void displayFahrenheit() {
-//        double fahrenheit = toFahrenheit();
-//        std::cout << "Temperature in Fahrenheit: " << fahrenheit << "°F" << std::endl;
-//    }
-//};
-//
-//int main() {
-//    Temperature temp;
-//
-//    // Take temperature input from the user in Celsius
-//    std::cout << "Enter temperature in Celsius: ";
-//    std::cin >> temp.celsius;
-//
-//    // Display the converted temperature in Fahrenheit
-//    temp.displayFahrenheit();
-//
-//    return 0;
-//}
+   // Constructor to initialize the Voter object
+   Voter(std::string voterName, int voterAge) {
+       name = voterName;
+       age = voterAge;
+   }
+};
+
+// Function to check if the voter is eligible to vote
+void checkEligibility(const Voter& voter) {
+   if (voter.age > 18) {
+       std::cout << voter.name << " is eligible to vote." << std::endl;
+   } else {
+       std::cout << voter.name << " is not eligible to vote. You must be over 18." << std::endl;
+   }
+}
+
+int main() {
+   std::string name;
+   int age;
+
+   // Take input from the user
+   std::cout << "Enter your name: ";
+   std::getline(std::cin, name);
+   std::cout << "Enter your age: ";
+   std::cin >> age;
+
+   // Create a Voter object with user input
+   Voter voter(name, age);
+
+   // Check and display eligibility
+   checkEligibility(voter);
+
+   return 0;
+}
+
+
+TEMPRATURE CONVERTER----------------------------task4
+
+class Temperature {
+public:
+   double celsius; // Public data member to store temperature in Celsius
+
+   // Function to convert Celsius to Fahrenheit
+   double toFahrenheit() {
+       return (celsius * 9 / 5) + 32;
+   }
+
+   // Function to display the converted temperature
+   void displayFahrenheit() {
+       double fahrenheit = toFahrenheit();
+       std::cout << "Temperature in Fahrenheit: " << fahrenheit << "°F" << std::endl;
+   }
+};
+
+int main() {
+   Temperature temp;
+
+   // Take temperature input from the user in Celsius
+   std::cout << "Enter temperature in Celsius: ";
+   std::cin >> temp.celsius;
+
+   // Display the converted temperature in Fahrenheit
+   temp.displayFahrenheit();
+
+   return 0;
+}
 
 
 
-//ENCAPSULATION------------------------------------------------------
+ENCAPSULATION------------------------------------------------------
 
 
 #include <iostream>
