@@ -1,64 +1,56 @@
 #include<iostream>
-#include<iomanip>
-#include "calculator.h"
-#include "product.h"
-#include "rectangle.h"
-#include "student.h"
-#include "temperature.h"
-#include "voter.h"
+#include"employee.h"
+#include"bankAccount.h"
+#include"rectangle.h"
+#include"locker.h"
 using namespace std;
 int main(){
-//Testing the functionality of class "student"-------------------------------------
-//   Student s;   
-//   s.get_data();    //calling member functions
-//   s.display_data();
-//Testing the functionality of class "Rectangle"-------------------------------------------
-//   Rectangle r;
-//   cout<<"|Getting Dimensions|"<<endl;
-//   r.setdimensions();
-//   cout<<"Area of Rectangle: "<<r.area()<<"square meter"<<endl;
-//   cout<<"Perimeter of Rectangle: "<<r.perimeter()<<"meter";
+	int choice;
+	cout<<"_______DISPLAYING MENU_______"<<endl;
+	cout<<"Choose from the following options:"<<endl;
+	cout<<"1. Employee "<<endl;
+	cout<<"2. Bank account "<<endl;
+	cout<<"3. Rectangle"<<endl;
+	cout<<"4. Locker "<<endl;
+	cout<<"Your choice: ";
+	cin>>choice;
+	switch(choice){
+		case 1:{
+			Employee e;
+           	e.displayDetails();
+			break;
+		}
 
-//Testing the functionality of class "Voter"------------------------------------------
-//   Voter v;
-//   v.get_details();
-//   v.is_eligible();
-//   v.display_message();
+        case 2:{
+        	BankAccount b("PK0309800780100","",10000.23);
+            b.showAccountDetails();
+			break;
+		}
+        
+        case 3:{
+       	    Rectangle r;
+          //Rectangle r(2.3f,5.6f);
+          //Rectangle r(3.4f);
+            r.showDetails();
+			break;
+		}
+        	
+        case 4:{
+        	cout<<"Creating locker automatically in stack"<<endl;
+       {
+            Locker stacklocker;    //automatically constructor and destructor called when object is created
+        }
+        cout<<"Creating locker dynamically in heap"<<endl;
+        Locker* heapLocker= new Locker();     //manually allocating and deleting memory on heap
+        cout<<"Deleting locker manually"<<endl;
+        delete heapLocker;
+			break;
+		}
 
-//Testing the functionality of class "temperature"----------------------------------------
-//   temperature t;
-//   t.temperatureMenu();
-//   t.get();
-//   t.convertor();
-//   t.display();
+        default:
+        	cout<<"Invalid input!"<<endl;
+        	break;
+	}
 
-//// Testing the functionality of class "calculator"-------------------------------------
-//   calculator c;
-//   int operation;
-//   c.input_numbers();    //calling the function to take input from user
-//   cout << "\nSelect an operation:" << endl;   //allowing user to select the operation he wants to perform
-//   cout << "1. Add" << endl;
-//   cout << "2. Subtract" << endl;
-//   cout << "3. Multiply" << endl;
-//   cout << "4. Divide" << endl;
-//   cout << "Enter the operation (1/2/3/4): ";
-//   cin >> operation;
-//   c.performOperation(operation);     //calling the function to perform the selected operation
-
-//Testing the functionality of class "product"------------------------------------------
-   product p; 
-//testing invalid attributes
-   p.setname("");
-   p.setprice(-20);
-   p.setquantity(-2);
-//testing valid attributes
-//   p.setname("Laptop");
-//   p.setprice(20000);
-//   p.setquantity(2);
- //displaying data
-   cout<<"\n=== Product Details ==="<< endl;
-   cout<<"Name: "<< p.getname()<< endl;
-   cout<<"Price: $"<<fixed <<setprecision(2)<<p.getprice()<<endl;
-   cout<<"Quantity: "<<p.getquantity()<<endl;
-   
 }
+

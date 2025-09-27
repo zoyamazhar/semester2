@@ -1,27 +1,26 @@
 #include<iostream>
 using namespace std;
 class Rectangle{
+	float length;
+	float width;
 	public:
-		//data members
-	int length;
-	int width;
-	   //member functions declared inside the class
-	void setdimensions();
-	int area();
-	int perimeter();   
-	
+		Rectangle(){      //Default Constructor
+			length=1.0;
+			width=1.0;
+		}
+		Rectangle(float l, float w){    //Parameterized Constructor
+			length=l;
+			width=w;
+		}
+		Rectangle(float p){       
+			length=p;
+			width=length;
+		}
+		void showDetails(){         
+			cout<<"========================"<<endl;
+			cout<<"|    RECTANGLE DETAILS  "<<endl;
+			cout<<"| Length: "<<length<<endl;
+			cout<<"| Width: "<<width<<endl;
+			cout<<"========================"<<endl;
+		}
 };
-      //member functions defined outside the class
-void Rectangle::setdimensions(){
-	cout<<"Enter length of rectangle: ";
-	cin>>length;
-	cout<<"Enter width of rectangle: ";
-	cin>>width;
-}
-int Rectangle::area(){
-	return (length*width);
-}
-int Rectangle::perimeter(){
-	return 2*length+2*width;
-	
-}
